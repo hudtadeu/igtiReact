@@ -8,10 +8,17 @@ export default class Counter extends Component {
     this.currentCounter = 2;
   }
 
+  handleClick = () => {
+    console.log('Click');
+    this.currentCounter--;
+    this.render();
+  };
+
   render() {
     return (
       <div className={css.counterContainer}>
         <button
+          onClick={this.handleClick}
           className="waves-effect
         waves-light btn red darken-4"
         >
