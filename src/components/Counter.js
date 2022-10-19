@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import css from './counter.module.css';
 
 export default class Counter extends Component {
   constructor() {
@@ -9,15 +10,16 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <div>
+      <div className={css.counterContainer}>
         <button
           className="waves-effect
         waves-light btn red darken-4"
         >
           -
         </button>
-        <sapn>{this.currentCounter}</sapn>
-        <button className="waves-effect
+        <span class={css.counterValue}>{this.currentCounter}</span>
+        <button
+          className="waves-effect
         waves-light btn green darken-4"
         >
           +
