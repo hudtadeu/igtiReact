@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import Counter from './components/Counter'
 
-function App() {
-  return (
-    <div>Olá, mundo!</div>
-  );
+
+export default class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Counter />
+        <Counter />
+        <Counter />
+      </Fragment>
+    );
+  }
 }
-
-export default App;
